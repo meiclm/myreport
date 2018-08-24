@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>找到那个Dom</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="navList">
+    <div><a href="19_findDom.html">找到那个DOM</a></div><div><a href="shoppingList.html">模拟shoppingList</a></div>
+</div>
+<div id="wrapper">
+    <div id="news-top" class="section">
+        <h3>Some title</h3>
+        <div class="content">
+            <ul>
+                <li><span>HTML</span><a href="">Some Link1</a></li>
+                <li><span>JS</span><a class="active" href="">Some Link2</a></li>
+                <li><span>CSS</span><a href="">Some Link3</a></li>
+                <li><span>JS</span><a href="">Some Link4</a></li>
+            </ul>
+        </div>
+        <img src="">
+        <p class="">Some Text</p>
+    </div>
+    <div id="news-normal" class="section">
+        <h3>Some title</h3>
+        <div class="content">
+            <ul>
+                <li><span>HTML</span><a href="">Some Link1</a></li>
+                <li><span>HTML</span><a href="">Some Link2</a></li>
+                <li><span>JS</span><a class="active" href="#">Some Link3</a></li>
+                <li><span>CSS</span><a href="">Some Link4</a></li>
+            </ul>
+        </div>
+        <div id="discipline">
+            <img src="img/工科.jpg">
+            <img src="img/理科.jpg">
+            <img src="img/文科.jpg">
+            <img src="img/其他.jpg">
+        </div>
+
+        <p class="">Some Text</p>
+    </div>
+</div>
+<div id="resultBox">
+    <div id="showResult_btn">
+        <input type="button" value="返回页面中所有li标签" id="btn1"><br><br>
+        <input type="button" value="返回某个section下所有span中内容为HTML的span标签" id="btn2"><br><br>
+        <input type="button" value="返回某个section下，所有所包含span内容为spanCont的LI标签" id="btn3"><br><br>
+        <input type="button" value=" 返回某个section下，class为active的链接中包含的文字内容" id="btn4">
+    </div>
+    <div id="showResult">结果显示</div>
+</div>
+<script src="19_findDom.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>

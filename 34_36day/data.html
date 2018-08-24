@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script src="js/ife31data.js"></script>
+</head>
+<body>
+<div>
+    <ul id="title">
+        <li>
+            <a href="index.html" class=" list" id="graphic" onclick="clickListI(this.id,'one','graphic2','two')">&nbsp;&nbsp;&nbsp;图&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <li>
+            <a href="data.html" id=" graphic2" class="current list" onclick="clickListI(this.id,'two','graphic','one')">数据图</a>
+        </li>
+    </ul>
+</div>
+<div>
+    <div id="two" >
+        <div id="#check">
+            <div id="check1">
+                <input type="checkbox" value="华东">华东
+                <input type="checkbox" value="华南">华南
+                <input type="checkbox" value="华北">华北
+                <input type="checkbox" value="全选">全选
+            </div>
+            <div id="check2">
+                <input type="checkbox" value="手机">手机
+                <input type="checkbox" value="笔记本">笔记本
+                <input type="checkbox" value="智能音箱">智能音响
+                <input type="checkbox" value="全选">全选
+            </div>
+        </div>
+
+
+        <div id="showGra">
+            <p id="tip" align="right"></p>
+            <canvas id="data1" width="600" height="520"></canvas>
+            <canvas id="data2" width="600" height="520"></canvas>
+        </div>
+        <div>
+            <table id="dataSource">
+                <tr>
+                    <th>产品</th>
+                    <th>地区</th>
+                    <th>一月</th>
+                    <th>二月</th>
+                    <th>三月</th>
+                    <th>四月</th><th>五月</th><th>六月</th><th>七月</th><th>八月</th><th>九月</th><th>十月</th>
+                    <th>十一月</th><th>十二月</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/dataBar.js"></script>
+</body>
+</html>

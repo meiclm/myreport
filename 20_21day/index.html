@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        #sprite{
+            width: 480px;
+            height: 480px;
+            background: url("erik_ce204002.jpg");
+        }
+    </style>
+</head>
+<body>
+<div id="navTitle">
+    <ul>
+        <li class="current"><a href="index.html">keypress事件</a></li>
+        <li><a href="control_2.html">控制元素的显示和隐藏</a></li>
+        <li><a href="control_index.html">再次结合事件和样式设置，进行练习</a></li>
+    </ul>
+</div>
+<div id="bodyText" class="">
+    <div id="tipBox">
+        <p>
+            在HTML中增加上面的代码，然后通过JavaScript编写如下功能：
+        <ul>
+            <li>当点击按钮 submit-btn 时，在console中输出 name 中的内容</li>
+            <li>在输入过程中，如果按回车键，则同样执行上一条的需求</li>
+            <li>在输入过程中，如果按 ESC 键，则把输入框中的内容清空</li>
+        </ul>
+        </p>
+    </div>
+    <hr>
+    <div>
+        <input id="name" type="text" onkeyup="enterKeypress(event)">
+        <button id="submit-btn">Submit</button>
+        <br><br>
+        页面结果：(顺便把结果也在这里显示)
+        <p id="result"></p>
+    </div>
+</div>
+
+<!--透明度-->
+<div id="fadeBox">
+    <p>针对以上 HTML，分别使用 setTimeout 和 setInterval 实现以下功能：</p>
+    <ul>
+        <li>点击按钮时，开始改变 fade-obj 的透明度，开始一个淡出（逐渐消失）动画，直到透明度为0</li>
+        <li>在动画过程中，按钮的状态变为不可点击</li>
+        <li>在动画结束后，按钮状态恢复，且文字变成“淡入”</li>
+        <li>在 按钮显示 淡入 的状态时，点击按钮，开始一个“淡入”（逐渐出现）的动画，和上面类似按钮不可点，直到透明度完全不透明</li>
+        <li>淡入动画结束后，按钮文字变为“淡出”</li>
+        <li>暂时不要使用 CSS animation （以后我们再学习）</li>
+    </ul>
+    <div id="fade-obj" style="width:300px;height:300px;background:#000"></div>
+    <button id="fade-btn">淡出</button>
+    <hr>
+    <br><br>
+</div>
+<div id="sprite" style="background-position: 0px 480px"></div>
+<script>
+    var result=document.getElementById("result");
+    document.getElementById("submit-btn").onclick=function () {
+        var name=document.getElementById("name");
+        console.log(name.value);
+        result.innerHTML="console.log()已经输出:"+name.value;
+    }
+    function enterKeypress(event) {
+        var name=document.getElementById("name");
+        if (event.keyCode==13){
+            console.log(name.value);
+            result.innerHTML="console.log()已经输出:"+name.value;
+        }else if (event.keyCode==27){
+            name.value="";
+        }
+    }
+
+//    透明度
+        var fade=document.querySelector("#fade-obj");
+        var fadeBtn=document.querySelector("#fade-btn");
+        var id;
+        var seed=100;
+        fadeBtn.onclick=function () {
+            if (this.innerHTML=="淡出"){
+                this.innerHTML="淡入";
+                id=setInterval(fadeIN,10)
+            }else {
+                this.innerHTML="淡出";
+                id=setInterval(fadeOut,10);
+            }
+        }
+        function fadeIN() {
+            fadeBtn.disabled=true;
+            seed--;
+            console.log("fadeIN(): "+seed);
+            fade.style.cssText="width:300px;height:300px;background:#000;opacity:"+seed/100+";";
+            if (seed==0){
+                window.clearInterval(id);
+                fadeBtn.disabled=false;
+            }
+        }
+        function fadeOut() {
+            fadeBtn.disabled=true;
+            seed++;
+            console.log(seed);
+            fade.style.cssText="width:300px;height:300px;background:#000;opacity:"+seed/100+";";
+            if (seed==100){
+                window.clearInterval(id);
+                fadeBtn.disabled=false;
+            }
+
+     }
+
+// css sprite是设置背景的
+    var sprite=document.getElementById("sprite");
+    var loc=0;
+    window.onload=function () {
+        var id=setInterval(changePosition,100);
+    }
+    function changePosition() {
+        loc+=480;
+        if (loc==8160) loc=0;
+        // sprite.setAttribute('style','background-position: 0px '+indexH+'px');
+        sprite.style.cssText="background-position: 0 "+loc+"px;";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+#ThreeBody{
+    width: auto;
+    height: auto;
+}
+#ThreeBody h2{
+    margin-left: 165px;
+    margin-right: auto;
+}
+#mainBox{
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+#mainBox #leftBox1{
+    width: 25%;
+    height: 767px;
+    background-color: rgba(23,155,99,0.45);
+    color: white;
+    font-size: 35px;
+    float: left;
+    text-align: center;
+    margin-right: 15px;
+    line-height: 75px;
+}
+
+#mainBox #leftBox2{
+    width: 75%;
+    height: auto;
+    float: left;
+    margin-left: 15px;
+}

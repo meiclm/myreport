@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="numberOperater.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="navTitle">
+    <ul>
+        <li><a href="numberOperater.html">第一个问题</a></li>
+        <li><a id="secondNav" href="numOperater_2.html" class="current" onclick="secondQu()">第二个问题</a></li>
+        <li><a id="threeNav" href="#" onclick="threeQu()">后几个问题</a></li>
+    </ul>
+    <hr>
+</div>
+<br>
+<div>
+    <!--第二个问题-->
+    <div id="second">
+        <h3 >第二个问题</h3>
+        <div>
+            <label>String A:
+                <input id="radio-a_2" type="radio" class="radio-obj" checked="true" name="str-obj" value="a">
+            </label>
+            <textarea id="str-a"></textarea>
+
+            <label>String B:
+                <input id="radio-b_2" type="radio" class="radio-obj" name="str-obj" value="b">
+            </label>
+            <textarea id="str-b"></textarea>
+            <br>
+            <br>
+            <label>Num A：<input id="num-a-2" type="number" value="0" class="num"></label>
+            <label>Num B：<input id="num-b-2" type="number" value="1" class="num"></label>
+        </div>
+        <div>
+            <button class="btn">获取当前选中输入的内容长度</button>
+            <button class="btn">当前选中输入中的第3个字符</button>
+            <button class="btn">把两个输入框的文字连接在一起输出（concat）</button>
+            <button class="btn">输入B中的内容，在输入A的内容中第一次出现的位置（indexOf）</button>
+            <button class="btn">输入A中的内容，在输入B的内容中最后一次出现的位置（lastIndexOf）</button>
+            <button class="btn">使用slice获取选中输入框内容的部分内容，参数为num-a及num-b</button>
+            <button class="btn">当前选中输入框的行数</button>
+            <button class="btn">使用substr获取选中输入框内容的子字符串，参数为num-a及num-b</button>
+            <button class="btn">9把所选输入框中的内容全部转为大写</button>
+            <button class="btn">把所选输入框中的内容全部转为小写</button>
+            <button class="btn">把所选输入框中内容的半角空格全部去除</button>
+            <button class="btn">把所选输入框中内容的a全部替换成另外一个输入框中的内容</button>
+        </div>
+        <p style="color: rgba(105,51,189,0.56);">num_a和num_b的值来自Num A、Num B的输入框</p>
+        <p id="result_2"></p>
+    </div>
+    <!--第三个问题-->
+    <div id="three" class="hide">
+        <h3>第三个问题</h3>
+        <p>实现一个字符串头尾去除空格的函数, 注意需要去除的空格，包括全角、半角空格, 暂时不需要学习和使用正则表达式的方式</p>
+        <p id="result-3">结果看 控制台 console</p>
+<br>
+        <div>
+            <h3>第四个问题</h3>
+            <p>
+                var tree = { "id": 0, "name": "root", "left":<br>
+                            { "id": 1, "name": "Simon", "left":<br>
+                             { "id": 3, "name": "Carl", "left":<br>
+                              { "id": 7, "name": "Lee", "left":<br>
+                            { "id": 11, "name": "Fate" }       },<br>
+                       "right": { "id": 8, "name": "Annie", "left": { "id": 12, "name": "Saber" } } },<br>
+                "right": { "id": 4, "name": "Tony", "left": <br>
+                { "id": 9, "name": "Candy" } } }, <br>
+                "right": { "id": 2, "name": "right",<br>
+                "left": { "id": 5, "name": "Carl", },<br>
+                "right": { "id": 6, "name": "Carl", "right": { "id": 10, "name": "Kai"
+                } } } }
+            </p>
+            <p>有对象，分别实现代码下方的几个函数，满足以下需求：</p>
+            <ul>
+                <li>假设id和name均不会重复，根据输入name找到对应的id</li>
+                <li>假设id和name均不会重复，根据输入id找到对应的name</li>
+                <li>把这个对象中所有的名字以“前序遍历”的方式全部输出到console中</li>
+                <li>把这个对象中所有的名字以“中序遍历”的方式全部输出到console中</li>
+                <li> 把这个对象中所有的名字以“后序遍历”的方式全部输出到console中</li>
+            </ul>
+            输入name：<input type="text" id="nameText">&nbsp;&nbsp;<button id="nameBtn">&nbsp;name&nbsp;</button><br><br>
+            输入id：<input type="text" id="idText">&nbsp;&nbsp;<button id="idBtn">&nbsp;&nbsp;id&nbsp;&nbsp;</button>
+            <p><button id="otherBtn">结果</button>&nbsp;&nbsp;看控制台</p>
+        </div>
+
+        <div id="five">
+            <br><br>
+            <h3>五、队列</h3>
+            <p>练习如何使用数组来实现队列，综合考虑使用数组的 push，pop，shift，unshift操作</p>
+            <input id="queue-input" type="text">
+            <p id="queue-cont">队列内容：apple-&gt;pear</p>
+            <button id="in-btn">入队</button>
+            <button id="out-btn">出队</button>
+            <button id="font-btn">打印队头元素内容</button>
+            <button id="empty-btn">判断队列是否为空</button>
+
+        </div>
+
+        <br><br>
+        <div id="six">
+            <h3>六、栈的操作</h3>
+            <div>
+                <input id="stack-input" type="text">
+                <p id="stack-cont">栈内容：apple-&gt;pear</p>
+                <button id="push-btn">进栈</button>
+                <button id="pop-btn">退栈</button>
+                <button id="font-btn_stack">打印栈顶元素内容</button>
+                <button id="empty-btn_stack">判断栈是否为空</button>
+            </div>
+        </div>
+        <br><br>
+        <div id="seven">
+            <h3>七、排序</h3>
+            <p>var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140];</p>
+            <p>var arr = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];</p>
+            <p>var arr = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];</p>
+            <p>var arr = [
+                <ul>
+                   <li> { id: 1, name: 'candy', value: 40 },</li>
+                   <li> { id: 2, name: 'Simon', value: 50 },</li>
+                   <li> { id: 3, name: 'Tony', value: 45 },</li>
+                    <li> { id: 4, name: 'Annie', value: 60 } ];</li>
+               </ul>
+            </p>
+            <button id="btn_7">看结果</button>
+            <p id="result-7"></p>
+        </div>
+        <div id="eight">
+            <br><br>
+            <h3>八、不同的数据结构进行存储</h3>
+            <p>var scoreObject = {<br>
+                &nbsp;&nbsp; &nbsp;&nbsp;"Tony": { "Math": 95, "English": 79, "Music": 68 },<br>
+                &nbsp;&nbsp; &nbsp;&nbsp;"Simon": { "Math": 100, "English": 95, "Music": 98 },<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; "Annie": { "Math": 54, "English": 65, "Music": 88 }<br>
+                }
+            </p>
+            <p><input id="result_8" type="button" value="结果显示在控制台"></p>
+        </div>
+        <script type="text/javascript" src="numOperator_5.js"></script>
+        <script type="text/javascript" src="numOperator_3.js"></script>
+        <script type="text/javascript" src="numOperator8.js"></script>
+    </div>
+
+</div>
+<script type="text/javascript" src="numOperator_2.js"></script>
+</body>
+</html>

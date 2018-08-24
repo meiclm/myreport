@@ -1,0 +1,344 @@
+#bigBox{
+    width: 96%;
+    height: 645px;
+    position: relative;
+    padding: 0px 25px 0px 25px;
+    border: black 0.6px solid;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration-line: none;
+}
+a:hover{
+    text-decoration-line: underline;
+}
+/*工具栏样式*/
+#left_1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 9.5%;
+    background-color: #1d2531;
+}
+#left_1 ul,#left_1 ul>li{
+    margin-left: 0px;
+}
+#left_1 ul>li{
+    list-style: none;
+    margin-top: 13px;
+}
+#left_1_bottom{
+    position: absolute;
+    bottom: 0px;
+}
+#left_1_bottom ul{
+    display: inline-block;
+}
+#left_1_bottom ul>li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 15px;
+}
+/*菜单栏的设置*/
+#left_2{
+    position: absolute;
+    top: 0px;
+    left: 9.35%;
+    bottom: 0px;
+    width: 17%;
+    margin:0 0 0 0;
+    background-color: rgb(36,46,60);
+}
+.next_1{
+padding-left: 25px;
+    margin-bottom: 0px ;
+}
+.next_1 li{
+    display: inline-block;
+    color: grey;
+    margin-bottom: 2px;
+}
+
+.next_2{
+    display:block ;
+    padding: 0px 5px 10px 5px;
+    border-bottom: #222c2c 1px solid;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.next_2 li{
+    display: block;
+    margin-top: 10px;
+}
+.next_2 li>a{
+    text-decoration-line: none;
+    color: rgb(183,192,205);
+    font-size: 12px;
+}
+.next_2 li>a:hover{
+    text-decoration-line: underline;
+}
+.next_3{
+    margin: 10px 0px 10px 0px;
+}
+.next_4_bottom{
+    position: absolute;
+    bottom: 1px;
+}
+.next_4_bottom ul>li{
+    font-size: 13px;
+    color: rgb(183,192,205);
+    margin-right: 55px;
+}
+
+/*消息栏*/
+
+#myInfo{
+    position: absolute;
+    right: 2px;
+    left: 26.4%;
+    top: 0%;
+    height: 70px;
+    border-bottom:grey 0.5px solid ;
+}
+#myInfo #left_message,#infoTitle #left_message2{
+    left: 18px;
+    top: 21px;
+    color: grey;
+    font-size: 18.9px;
+}
+#right_message{
+    position: absolute;
+    right: 2px;
+    top: 5px;
+    width: 299px;
+    height: 70px;
+}
+#myInfo #left_message,#right_pic,#my_message,#btn_message{
+    display: inline-block;
+    position: absolute;
+}
+#right_pic{
+    left: 65px;
+    top: 2px;
+}
+#my_message{
+    right: 82px;
+}
+#my_message p{
+    line-height: 9px;
+    color: grey;
+}
+#btn_message{
+    right: 12px;
+}
+#btn_message:hover{
+    border-bottom: grey 1px solid;
+}
+/*查询表*/
+#searchDiv{
+    position: absolute;
+    left: 26.5%;
+    top: 70px;
+    height: 70px;
+    right: 0px;
+    border-bottom: grey 0.5px solid;
+}
+#left_message2{
+    position: absolute;
+    top: 0px;
+    width: 420px;
+    height: 70px;
+    left: 0px;
+    border-right: grey 0.5px solid;
+}
+#left_message2 span{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+}
+#left_message2 span>input{
+    width: 380px;height: 35px;border-radius: 10px;box-shadow: 0px;
+}
+#left_message2>img{
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    cursor: pointer;
+}
+/*查询的右边*/
+#logal{
+    position: absolute;
+    left: 410px;
+    right: 0px;
+    top: 0px;
+}
+#logal span{
+    position: absolute;
+    top: 23px;
+    font-size: 19px;
+    margin-left:  25px;
+}
+#logal>.statue{
+    position: absolute;
+    top: 32px;
+    width: 10px;
+    margin-left: 6px;
+    left: 131px;
+    height: 11px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgb(27,185,52);
+}
+#logal>#right_btn{
+    right: 12px;
+    width: 265px;
+    top: 15px;
+}
+#logal>#right_btn,#list_btn1,#list_btn2,#list_btn3{
+    display: inline-block;
+    position: absolute;
+
+}
+#list_btn1{
+    top: 21px;
+    right: 210px;
+}
+#list_btn2{
+    right: 111px;
+    top: 26px;
+}
+#list_btn2>span{
+    color: grey;
+    margin-left: 15px;
+ }
+#list_btn3{
+    right: 20px;
+    top: 21px;
+}
+/*内容*/
+#message{
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+#info_text{
+    position: absolute;
+    top: 70px;
+    left: 26.3%;
+    right: 0px;
+    bottom: 0px;
+    overflow: auto;
+    overflow-x:hidden ;
+}
+#content{
+    display: inline-block;
+}
+/*朋友列表*/
+#infoList{
+    width: 420px;
+    height: auto;
+    margin-top: 0px;
+    left: 26%;
+    border-right: grey 0.5px solid;
+}
+
+#left_message_list{
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    width: 420px;
+}
+#left_message_list table{
+    overflow: hidden;
+    width: 423px;
+    margin-right: 0px;
+
+}
+#left_message_list table, #left_message_list table tr{
+    margin-top: 0px;
+}
+#left_message_list table p{
+    color: grey;
+}
+#left_message_list table .headTd{
+    padding: 13px 0px 0px 25px;
+    margin-left: 0px;
+}
+.friends_pic,.friend_info,.distant{
+    display: inline-block;
+}
+.friends_pic{
+    margin-left: 0px;
+}
+.friend_info{
+    margin-left: 15px;
+}
+.friend_info p{
+    line-height: 6px;
+}
+.friend_info p .statue{
+    background-color: blue;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 0px;
+    border-radius: 50%;
+}
+.distant{
+    position: absolute;
+    right: 0px;
+    color: grey;
+    padding-right: 10px;
+    margin-right: 0px;
+}
+#left_message_list table .textTd{
+    overflow: hidden;
+    color: grey;
+    font-size: 15px;
+    overflow: hidden;
+    border-bottom: rgba(2,5,20,0.18) 0.5px solid;
+    padding: 0px 0px 15px 25px;
+}
+/*朋友圈内容*/
+#content{
+    position: absolute;
+    top: 0px;
+    left:407px;
+    right: 0px;
+    bottom: 0px;
+    border-right: grey 0.3px solid;
+}
+#content ul>li{
+    position: relative;
+}
+
+.contentList{
+    margin: 0px 0px 0px 15px;
+    height: auto;
+    padding-left: 10px;
+    border-left: grey 0.3px solid;
+}
+.centerTop{
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+}
+
+.username_time>.username{
+    color: grey;
+    font-size: 21px;
+}
+.username_time>.time{
+    font-size: 15px;
+    color: rgba(2,5,20,0.5);
+}
+#last:hover{
+    z-index: 0;
+}

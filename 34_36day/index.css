@@ -1,0 +1,61 @@
+#title li{
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+#title li a{
+    text-decoration-line: none;
+    -moz-text-decoration-line: none;
+    color: lightseagreen;
+    padding: 10px 25px;
+}
+#title li a:hover{
+    background-color: lightseagreen;
+    color: white;
+}
+#title .current{
+    background-color: lightseagreen;
+    color: white;
+}
+.hide{
+    display: none;
+}
+.ifr{
+    width: 300px;
+    height: 300px;
+
+}
+iframe{
+    margin: 5px;
+    padding: 5px;
+    border: none;
+}
+#time{
+    padding: 15px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 25px;
+}
+#time h2{
+    margin: 0px;
+    padding: 2px 0px;
+    color: white;
+}
+
+/*数据图*/
+#check1,#check2{
+    margin: 10px 25px;
+}
+canvas{
+    border: solid 1px red;
+    margin: 0px 5px;
+}
+#dataSource{
+    margin: 10px 0px;
+    border-collapse: collapse;/*为表格设置合并边框模型：*/
+}
+#dataSource tr td,#dataSource tr th{
+    padding: 5px 15px;
+    border: 1px black solid;
+
+}

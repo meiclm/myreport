@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="controlBox">
+    <div id="navTitle">
+        <ul>
+            <li><a href="index.html">keypress事件</a></li>
+            <li class="current"><a href="control_2.html">控制元素的显示和隐藏</a></li>
+            <li><a href="control_index.html">再次结合事件和样式设置，进行练习</a></li>
+        </ul>
+    </div>
+    <div id="tipBox">
+        <p>
+            基于如上 HTML (keypress事件)，实现以下功能：
+            <ul>
+               <li>当用户选择了 School 的单选框时，显示 School 的下拉选项，隐藏 Company 的下拉选项</li>
+               <li>当用户选择了 School 的单选框时，显示 Company 的下拉选项，隐藏 School 的下拉选项</li>
+            </ul>
+        </p>
+    </div>
+    <div id="showControl">
+        <label>
+            <input id="school" name="status" type="radio">
+            School
+        </label>
+        <label>
+            <input id="company" name="status" type="radio">
+            Company
+        </label>
+
+        <select id="school-select" class="hide">
+            <option>北京邮电大学</option>
+            <option>黑龙江大学</option>
+            <option>华中科技大学</option>
+        </select>
+
+        <select id="company-select" class="hide">
+            <option>百度</option>
+            <option>爱奇艺</option>
+        </select>
+    </div>
+</div>
+<script>
+    var school=document.getElementById("school");
+    var company=document.getElementById("company");
+
+    var schoolSelect=document.getElementById("school-select");
+    var companySelect=document.getElementById("company-select");
+
+    school.onfocus=function () {
+        schoolSelect.classList.remove('hide');
+        companySelect.classList.add('hide');
+    }
+    // school.onblur=function () {
+    //     schoolSelect.classList.add('hide');
+    //  }
+     company.onfocus=function () {
+        companySelect.classList.remove('hide');
+         schoolSelect.classList.add('hide');
+     }
+    // company.onblur=function () {
+    //     companySelect.classList.add('hide');
+    // }
+</script>
+</body>
+</html>

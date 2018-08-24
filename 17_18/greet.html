@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间问候</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="top">
+    <div><a href="index.html">计算两个数</a></div>
+    <div><a href="second.html">二进制转换</a></div>
+    <div><a href="greet.html">时间问候</a></div>
+    <div><a href="threeGame.html">3的小游戏</a></div>
+    <div><a href="9_9Table.html">九九乘法表</a></div>
+</div>
+
+<div id="helloGreet"></div>
+<script>
+    var nowTime=new Date()
+    if (nowTime.getHours()<12){
+        document.getElementById("helloGreet").innerText="早上好";
+        if (nowTime.getHours()<9){
+            document.getElementById("helloGreet").innerText+="<br>你吃过早饭了吗？"
+        }
+    }else if (nowTime.getHours()>20){
+        document.getElementById("helloGreet").innerText="晚上好";
+    }else {
+        document.getElementById("helloGreet").innerText="中午好,改吃午饭了！";
+    }
+
+</script>
+</body>
+</html>

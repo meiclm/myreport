@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #contain{
+            position: relative;
+        }
+        #contain div{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(92,42,248,0.15);
+            top: 10px;
+            text-align: center;
+            padding: 35px auto;
+        }
+
+        #box2{
+            transform:skew(45deg);
+            /*元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数：*/
+        }
+        #box3{
+            /*元素的尺寸会增加或减少*/
+            transform: scale(0.5,1);
+            -ms-transform: scale(0.5,1);	/* IE 9 */
+            -webkit-transform: scale(0.5,1);	/* Safari 和 Chrome */
+            -o-transform: scale(0.5,1);	/* Opera */
+            -moz-transform: scale(0.5,1);
+        }
+        #box4{
+            /*元素顺时针旋转给定的角度*/
+            transform:rotate(45deg);
+            -ms-transform:rotate(45deg); /* Internet Explorer */
+            -moz-transform:rotate(45deg); /* Firefox */
+            -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+            -o-transform:rotate(45deg); /* Opera */
+        }
+        #box5{
+            /*元素从其当前位置移动，移动给定的 left（x 坐标） 和 top（y 坐标） 大小*/
+            transform:translate(2px,50px);
+            -ms-transform:translate(2px,50px); /* IE 9 */
+            -moz-transform:translate(2px,50px); /* Firefox */
+            -webkit-transform:translate(2px,50px); /* Safari and Chrome */
+            -o-transform:translate(2px,50px); /* Opera */
+        }
+        #box6{
+            /*-webkit-transform: matrix(2, 2, 0, 2, 45, 0);*/
+            /*transform: matrix(2, 2, 0, 2, 45, 0);*/
+            -webkit-transform: matrix(1, 1, 0, 1, 100, 100);
+            transform: matrix(1, 1, 0, 1, 100, 100);
+        }
+    </style>
+</head>
+<body>
+<div id="contain">
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+    <div id="box4">box4</div>
+    <div id="box5">box5</div>
+    <div id="box6">box6</div>
+</div>
+<script>
+    var div=document.querySelectorAll("div");
+
+    for (let i=1;i<div.length;i++){
+        if (i==1){
+            div[1].style.left=10+"px"
+        }else {
+            div[i].style.left=100*(i-1)+50*i+"px";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/*导航栏*/
+.navTitle{
+    margin: 25px 10px;
+}
+.navTitle ul li{
+    display: inline-block;
+    margin: 10px 0px;
+}
+.navTitle ul{
+    margin: 0px;
+}
+.navTitle ul li a{
+    padding: 15px;
+    color: rgba(68,90,189,0.56);
+    margin: 0px;
+    background-color: rgba(121,189,99,0.01);
+    text-decoration-line: none;
+}
+.navTitle .current{
+    background-color: rgba(100,189,93,0.56);
+    color: white;
+}
+.navTitle ul li a:hover{
+    background-color: rgba(100,189,93,0.56);
+    color: white;
+}
+
+
+/*第一个问题*/
+#first{
+    border: rgba(86,87,189,0.72) 1px solid;
+    margin: 5px 20px;
+    padding: 10px;
+}
+#first div button{
+    margin: 9px 15px;
+}
+
+/*第二个问题*/
+#second{
+    margin: 0px 25px;
+    border: rgba(86,87,189,0.72) 1px solid;
+    padding: 12px;
+}
+#second div label{
+    margin: 10px ;
+}
+#second div+div{
+    margin: 5px;
+}
+#second div+div button{
+    margin: 8px 15px;
+}
+/*第三个问题*/
+.hide{
+    display: none;
+}
+#three{
+    margin: 10px 35px;
+    padding: 20px;
+    border: rgba(105,51,189,0.56) 2px solid;
+}

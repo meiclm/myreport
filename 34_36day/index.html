@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div>
+    <ul id="title">
+        <li>
+            <a href="index.html" class="current list" id="graphic" onclick="clickListI(this.id,'one','graphic2','two')">&nbsp;&nbsp;&nbsp;图&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <li>
+            <a href="data.html" id="graphic2" class="list" onclick="clickListI(this.id,'two','graphic','one')">数据图</a>
+        </li>
+    </ul>
+</div>
+<h2 align="center">静态 .svg 图</h2>
+<div align="center">
+    <iframe src="svg/flower.svg" class="ifr"></iframe>
+    <iframe src="svg/tree.svg" class="ifr"></iframe>
+    <iframe src="svg/histogram.svg" width="450" height="320"></iframe>
+</div>
+<br>
+<hr>
+<br>
+<h2 align="center">JS canvas 图</h2>
+<div align="center" id="jsSVG">
+    <canvas id="clock" width="400" height="400" style="border: darkgray 1px solid;"></canvas>
+    <p id="time"></p>
+    <p>时间显示完毕</p>
+</div>
+<script src="js/clock.js"></script>
+</body>
+
+</html>

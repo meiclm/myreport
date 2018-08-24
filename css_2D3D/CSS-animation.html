@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .showImg{
+            width: 100%;
+            height: 300px;
+        }
+        .showImg img{
+            position: absolute;
+            top: 10px;
+            left: 40%;
+            width: 300px;
+            height: 300px;
+        }
+        .btnImg{
+            width: 100%;
+            height: 100px;
+        }
+        .btnImg img{
+            width: 120px;
+            height: 90px;
+            margin: 20px 10px;
+            border: 2px solid rgba(157,167,189,0.96);
+        }
+        .btnImg img:hover{
+            border: 2px solid gray;
+        }
+
+        .one{
+            animation: myOne 1s ease-out;
+        }
+        @keyframes myOne {
+            from{left: -500px}
+            to{left: 40%}
+        }
+
+        .two{
+            animation: myTwo 0.5s ease-out;
+        }
+        @keyframes myTwo {
+            from{top: 350px;}
+            to{top: 0px;}
+        }
+        .three{
+            animation: myThree 1s ease-in;
+        }
+        @keyframes myThree {
+            from{transform: scale(0.1)}
+            to{transform: scale(1)}
+        }
+        .four{
+            animation: myFour 1s ease-out;
+        }
+        @keyframes myFour {
+            from{transform: scale(2)}
+            to{transform: scale(1)}
+        }
+        .five{
+            animation: myFive 1s ease-in-out;
+        }
+        @keyframes myFive {
+            from{transform: rotate(-360deg) scale(0.1);}
+            to{transform: rotate(0deg) scale(1);}
+        }
+
+    </style>
+</head>
+<body>
+<div align="center">
+    <div class="showImg">
+        <img src="img/2.JPG">
+    </div>
+
+    <div class="btnImg">
+        <img src="img/6.JPG" onclick="myFunction(this)" name="one">
+        <img src="img/2.JPG" onclick="myFunction(this)" name="two">
+        <img src="img/3.JPG" onclick="myFunction(this)" name="three">
+        <img src="img/4.JPG" onclick="myFunction(this)" name="four">
+        <img src="img/5.JPG" onclick="myFunction(this)" name="five">
+    </div>
+</div>
+<script type="text/javascript">
+    var contain=document.querySelector(".showImg")
+        function myFunction(ev) {
+           contain.innerHTML='';
+           var picture=document.createElement("img");
+           picture.src=ev.src;
+           picture.classList.add(ev.name);
+           contain.appendChild(picture)
+        }
+</script>
+</body>
+</html>

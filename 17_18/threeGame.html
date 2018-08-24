@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3的小游戏</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="top">
+    <div><a href="index.html">计算两个数</a></div>
+    <div><a href="second.html">二进制转换</a></div>
+    <div><a href="greet.html">时间问候</a></div>
+    <div><a href="threeGame.html">3的小游戏</a></div>
+    <div><a href="9_9Table.html">九九乘法表</a></div>
+</div>
+<br>
+<hr>
+<p id="te">
+    <script>
+        var t=document.getElementById("te");
+        var i=1;
+        for (;i<=100;i++){
+            if ((i%3)==0){
+                t.innerText+=" "+"PA";
+                console.log("PA");
+            }else {
+                if (i.toString().indexOf("3")>0){
+                    t.innerText+=" "+"PA";
+                    console.log("PA");
+                }else {
+                    t.innerText+=" "+i;
+                    console.log(i);
+                }
+            }
+        }
+    </script>
+</p>
+
+</body>
+</html>

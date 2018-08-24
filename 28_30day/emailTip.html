@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper{
+            background-color: #99FFFF;
+        }
+        input{
+            width: 190px;
+            height: 30px;
+        }
+        ul{
+            border: darkgray 1px solid;
+            width: 190px;
+            padding: 0px;
+            margin: 0px;
+        }
+        ul li{
+            list-style: none;
+            width: 190px;
+            color: #686868;
+            cursor: pointer;
+        }
+        .colorful{
+            background-color: #99FFFF;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body >
+<div class="wrapper" id="contain" onfocus="delClear()">
+    <input id="email-input" type="text" oninput="myFunction(event)">
+    <ul id="email-sug-wrapper" class="email-sug hide">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script>
+    //邮箱后缀参考
+    var postfixList = ['@163.com', '@gmail.com', '@126.com', '@qq.com', '@263.net'];
+    function createTextLi(str) {
+        var li=document.querySelectorAll("li");
+        for (let i=0;i<postfixList.length;i++){
+            li[i].textContent=str+postfixList[i];
+        }
+    }
+    function setLiText(str) {
+        var li=document.querySelectorAll("li");
+        console.log("运行了！");
+        for (let i=0;i<postfixList.length;i++){
+            li[i].innerText=str+postfixList[i];
+        }
+    }
+    function removeTextLi() {
+        var li=document.querySelectorAll("li");
+        for (let i=0;i<postfixList.length;i++){
+            li[li.length-1].innerText="";
+        }
+    }
+    //隔行颜色变换
+    function liCSSColor() {
+        var li=document.querySelectorAll("li");
+        if (li.length>0){
+            for (let i=0;i<li.length;i++){
+                if (i%2==0){
+                    li[i].classList.add("colorful");
+                }
+            }
+        }
+    }
+    function trim(str) {
+        return str.replace(/(^ *)|( *$)/g,"");
+    }
+    var inputT=document.getElementById("email-input");
+    inputT.onfocus=function () {
+        var ul=document.getElementById("email-sug-wrapper");
+        ul.classList.remove("hide");
+        createTextLi("");
+        liCSSColor();
+    };
+    //选择列表的文本
+    var str_1="";
+    var li=document.querySelectorAll("li");
+    for (let j=0;j<li.length;j++){
+        li[j].onclick=function () {
+            str_1=li[j].textContent;
+            inputT.value=str_1;
+        }
+    }
+    function myFunction(event) {
+        var key=event.keyCode;
+        var x=inputT.value+"";
+        if (x.indexOf("@")>0){
+            x=x.substring(0,x.indexOf("@"));
+        }
+
+         if (key==8){
+            x=x.substring(0,x.length-1);
+        }
+        setLiText(x);
+    }
+function delClear() {
+    var ul=document.getElementById("email-sug-wrapper");
+    if (!ul.classList.contains("hide")){
+        ul.classList.add("hide");
+    }
+    removeTextLi();
+}
+</script>
+</body>
+</html>

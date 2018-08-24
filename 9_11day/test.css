@@ -1,0 +1,87 @@
+body{
+    width: 95%;
+    position: relative;
+}
+.body_box{
+    border: rgba(44,4,28,0.4) 2px solid;
+    width: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.hr_Line_1,.hr_Line_2{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.hr_Line_1{
+    height: 5px;background-color: #8d8d8d;margin-top: 10px;
+}
+.hr_Line_2{
+    margin-top: 335px;height: 5px;background-color: #8d8d8d
+}
+
+#two_pic_box{
+    width: 100%;
+    height: 385px;
+}
+#two_pic{
+    margin-left: 185px;
+}
+#two_pic>img{
+    float: left;
+    margin-left: 45px;
+    border: grey 2px solid;
+}
+.box_float{
+    width: 100%;
+    height: auto;
+    margin: 10px 10px 20px 115px;
+}
+.box_float #left,#right{
+    float: left;
+    width: 50%;
+    height: 445px;
+    overflow: hidden;
+}
+.box_float #left>img,#right>img{
+    height: 435px;
+}
+#pic_1,#pic_02{
+    height: 325px;
+}
+
+#body_right{
+    width: 20%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 80%;
+}
+#body_right>#one_right{
+    border: rgba(65,30,11,0.22) 2px solid;
+    padding: 10px;
+}
+#pic_host{
+    padding: 10px 25px 5px 65px;
+}
+#pic_host>img{
+    width: 100px;
+    height: 105px;
+    border: grey 1px solid;
+}
+
+#body_right div ul{
+    border: rgba(188,69,40,0.61) 1px solid;
+}
+h4,#body_right div ul>li{
+    color: rgba(188,69,40,0.58);
+}
+#body_right div ul>li{
+    list-style: none;
+}
+#body_right div ul>li:hover{
+    list-style: none;
+    text-decoration-line: underline;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="top">
+    <div><a href="index.html">计算两个数</a></div>
+    <div><a href="second.html">二进制转换</a></div>
+    <div><a href="greet.html">时间问候</a></div>
+    <div><a href="threeGame.html">3的小游戏</a></div>
+    <div><a href="9_9Table.html">九九乘法表</a></div>
+</div>
+<input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+<button id="trans-btn">转化为二进制</button>
+<p id="result">运算结果</p>
+<script>
+
+    var result='0';
+    function dec2bin(decNumber) {
+        if (decNumber<0){
+            result='1';
+        }else
+            result='';
+
+        result+=binary2(Math.abs(decNumber),2);
+        result=result.split(",").join("");//将数组转化为字符串后的逗号去掉
+        return result;
+    }
+function binary2(numb10,bin) {
+    var newArray=[];
+    var num=[];
+    //转化显示后的二进制数为bin-bit中输入的数字宽度
+    //设置数字的长度
+    for (var k=0;k<numb10;k++){
+        num[k]='0';
+    }
+
+    //除法运算至多为 (numb10/2)+1 次
+    var count=(numb10/bin)+1;
+    var leave=0;
+    for (var i=0;i<count;i++){
+            leave=numb10%bin ;//把除2后的余数保存到数组
+            numb10=numb10/bin;
+            newArray.push(parseInt(leave));
+    }
+    for (var j=1;j<=newArray.length;j++){
+        num[j]=newArray[newArray.length-j];
+    }
+
+    return  num.toString();
+}
+    // 实现党点击转化按钮时，将输入的十进制数字转化为二进制，并显示在result的p标签内
+    // Some coding
+
+    document.getElementById("trans-btn").onclick=function () {
+        var inputNum=parseInt(document.getElementById("dec-number").value);
+        document.getElementById("result").innerText+=" "+dec2bin(inputNum);
+    }
+</script>
+</body>
+</html>

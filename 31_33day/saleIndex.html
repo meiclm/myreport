@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第三十一到第三十三天：我是精明的小卖家</title>
+    <link href="saleIndex.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="result-wrap"></div>
+<div id="regionDiv">
+    地区：<select id="region-select">
+        <option></option>
+        <option value="1">华南</option>
+        <option value="2">华北</option>
+        <option value="3">华东</option>
+    </select>
+</div>
+<div id="result-wrap2">结果：</div>
+<hr>
+<div id="result-select">
+    地区：<select id="region-selected">
+        <option value="0"></option>
+        <option value="1">华南</option>
+        <option value="2">华北</option>
+        <option value="3">华东</option>
+    </select>
+    产品：<select id="product-selected">
+        <option value="4"></option>
+        <option value="5">手机</option>
+        <option value="6">智能音箱</option>
+        <option value="7">笔记本</option>
+    </select>
+</div>
+<div id="result-wrap3"></div>
+<div id="result-checkBox">
+    <div id="region-checkbox">
+        地区：<input type="checkbox" value="1"> 华南
+        <input type="checkbox" value="2"> 华北
+        <input type="checkbox" value="3"> 华东
+        <input type="checkbox" value="91" id="regionCheck">全选
+    </div>
+    <div id="product-checkbox">
+        产品：<input type="checkbox" value="5"> 手机
+        <input type="checkbox" value="6"> 智能音箱
+        <input type="checkbox" value="7"> 笔记本
+        <input type="checkbox" value="92" id="productCheck">全选
+    </div>
+    <div id="sale-checkbox">
+        <p>下面没有实现功能</p>
+        销量：<input type="checkbox" value="1"> 1 月
+        <input type="checkbox" value="2"> 2 月
+        <input type="checkbox" value="3"> 3 月
+        <input type="checkbox" value="4"> 4 月
+        <input type="checkbox" value="5"> 5 月
+        <input type="checkbox" value="6"> 6 月
+        <input type="checkbox" value="7"> 7 月
+        <input type="checkbox" value="8"> 8 月
+        <input type="checkbox" value="9"> 9 月
+        <input type="checkbox" value="10"> 10 月
+        <input type="checkbox" value="11"> 11 月
+        <input type="checkbox" value="12"> 12 月
+        <input type="checkbox" value="93" id="">全选
+    </div>
+
+    <div>
+        <input type="checkbox" value="97">全选
+    </div>
+    <input type="button" value="查看" id="checkBtn">
+</div>
+<div id="result-wrap4"></div>
+<script type="text/javascript" src="ife31data.js"></script>
+<script src="saleIndex.js"></script>
+</body>
+</html>

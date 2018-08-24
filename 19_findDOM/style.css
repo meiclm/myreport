@@ -1,0 +1,68 @@
+div{
+    margin: 15px 35px;
+}
+
+/*导航栏*/
+#navList div{
+    display: inline-block;
+    margin: 5px 1px ;
+    padding: 4px 10px;
+    background-color: rgba(110,86,209,0.51);
+}
+#navList div:hover{
+    text-decoration-line: underline;
+}
+#navList div a{
+    color: white;
+    text-decoration-line: none;
+}
+
+/*19_findDom.html*/
+#discipline img{
+    margin:15px 0px 15px 3px ;
+}
+#discipline img:hover{
+    cursor: pointer;
+    box-shadow: 1px -5px 1px lightseagreen;
+}
+#resultBox{
+    width: auto;
+    height: 300px;
+    position: relative;
+}
+#showResult_btn,#showResult{
+    display: inline-block;
+    border: black 1px solid;
+    width: 480px;
+    height: 253px;
+    padding: 25px 35px;
+    position: absolute;
+}
+#showResult_btn{
+    left: 0px;
+    top: 0px;
+}
+#showResult_btn input{
+    cursor: pointer;
+    width: 420px;
+    height: 35px;
+}
+#showResult{
+    right: 0px;
+    top: 0px;
+}
+
+/*shoppingList.html*/
+#showScreen li{
+    margin-bottom: 10px;
+}
+#showScreen li button {
+    font-size: 8px;
+    margin-left: 20px;
+    color: #666;
+}
+.delBtn{
+    border-radius: 15px;
+    width: 75px;
+    margin: 1px 5px;
+}

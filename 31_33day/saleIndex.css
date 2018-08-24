@@ -1,0 +1,31 @@
+div{
+    margin: 10px 5px;
+    padding: 5px;
+}
+table{
+    padding: 5px;
+    border-collapse: collapse;/*为表格设置合并边框模型：*/
+}
+table tr th{
+    padding: 5px 0px;
+    border: grey 1px solid;
+}
+#result-wrap table tr th{
+    padding: 10px 25px;
+    border: blueviolet 1px solid;
+}
+table tr td{
+    text-align: center;
+    margin: 0px;
+    border: grey 1px solid;
+}
+table tr .region,.product{
+    width: 180px;
+}
+.sale{
+    width: 35px;
+    padding: 5px;
+}
+#result-wrap4{
+    height: 280px;
+}

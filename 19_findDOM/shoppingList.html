@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Shopping list example</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="navList">
+    <div><a href="19_findDom.html">找到那个DOM</a></div><div><a href="shoppingList.html">模拟shoppingList</a></div>
+</div>
+<div id="showScreen">
+    <h1>My shopping list</h1>
+    <div>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name="item" id="item">
+        <button onclick="showClick()">Add item</button>
+    </div>
+    <ul>
+    </ul>
+    <div id="textR"></div>
+</div>
+<script>
+    function showClick() {
+        var ul=document.querySelector("ul");
+
+        var li=document.createElement("li");
+
+        var button=document.createElement("input");
+        button.value="删除";
+        button.type="button";
+        button.classList.add("delBtn");
+
+        var text=document.querySelector("input");
+
+        li.innerText=text.value;
+        li.appendChild(button)
+        ul.appendChild(li);
+        text.value="";
+
+       button.onclick=function (ev) {
+           ul.removeChild(li);
+       }
+    }
+
+
+
+</script>
+</body>

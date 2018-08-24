@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="top">
+    <div><a href="index.html">计算两个数</a></div>
+    <div><a href="second.html">二进制转换</a></div>
+    <div><a href="greet.html">时间问候</a></div>
+    <div><a href="threeGame.html">3的小游戏</a></div>
+    <div><a href="9_9Table.html">九九乘法表</a></div>
+</div>
+<input id="first-number" type="number" value="" placeholder="第一个数字">
+<input id="second-number" type="number" value="" placeholder="第二个数字">
+<button id="add-btn" onclick="add()">加</button>
+<button id="minus-btn" onclick="sub()">减</button>
+<button id="times-btn" onclick="multi()">乘</button>
+<button id="divide-btn" onclick="devide()">除</button>
+<p id="result">运算结果</p>
+<div id="msg"></div>
+<script>
+    var firstNumber=document.getElementById("first-number");
+    var secondNumber=document.getElementById("second-number");
+    var msg=document.getElementById("msg");
+
+    var result=document.getElementById("result");
+    var sum=0;
+    function add() {
+        sum=parseInt(firstNumber.value)+parseInt(secondNumber.value);
+       result.innerText+=sum+" ";
+    }
+
+    function sub() {
+        numberIs();
+        sum=parseInt(firstNumber.value)-parseInt(secondNumber.value);
+        result.innerText+=sum+" ";
+    }
+
+    function multi() {
+        numberIs();
+        sum=parseInt(firstNumber.value)*parseInt(secondNumber.value);
+        result.innerText+=sum+" ";
+    }
+
+    function devide() {
+        numberIs();
+        if (parseInt(secondNumber.value)==0){
+            msg.innerHTML="除数不能为0";
+            console.log(sum);
+        }else {
+            sum=parseInt(firstNumber.value)/parseInt(secondNumber.value);
+            result.innerText+=sum+" ";
+        }
+    }
+
+   function numberIs(){
+        if (isNaN(parseInt(firstNumber.value))==NaN&&isNaN(parseInt(secondNumber))==NaN){
+            msg.innerHTML="请输入数字";
+        }
+    }
+
+</script>
+</body>
+</html>

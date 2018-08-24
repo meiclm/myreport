@@ -1,0 +1,29 @@
+body{
+    margin: 12px 25px;
+}
+#navTitle{
+    border-bottom: 2px grey solid;
+}
+#navTitle ul li{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+#navTitle ul li a:hover{
+    background-color: rgba(184,189,7,0.88);
+}
+#navTitle ul li a{
+    color: white;
+    padding: 5px;
+    background-color: rgba(222,219,17,0.6);
+    text-decoration-line: none;
+}
+.current{
+    padding-bottom: 12px;
+    border-bottom:  darkorange 2px solid;
+}
+
+
+.hide{
+    display: none;
+}
