@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition And cubic-bezier</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        #transition,#cubic{
+            width: 150px;
+            height: 50px;
+        }
+        #transition{
+            background-color: blueviolet;
+            transition: height 5s ease;
+            -webkit-transition:  height 5s ease;
+            -moz-transition:  height 5s ease;
+            -o-transition:  height 5s ease;
+        }
+        #transition:hover{
+            transform: translateY(150px);
+            -webkit-transform:  translateY(150px);
+            -moz-transform:  translateY(150px);
+            -o-transform:  translateY(150px);
+        }
+        #cubic{
+            float: right;
+            background-color: rgba(180,209,50,0.78);
+            transition: all 6s cubic-bezier(.25,.01,.25,1) ;
+            -webkit-transition:  all 6s cubic-bezier(.25,.01,.25,1);
+            -moz-transition:  all 6s cubic-bezier(.25,.01,.25,1);
+            -o-transition:  all 6s cubic-bezier(.25,.01,.25,1);
+        }
+        #cubic:hover {
+            -webkit-transform:  translateX(200px);
+            -moz-transform:  translateX(200px);
+            -o-transform:  translateX(200px);
+            transform:  translateX(200px);
+        }
+
+        .bar{
+            margin: 15px 12px;
+            color: rgba(90,209,130,0.78);
+            text-decoration-line: none;
+            max-width: 100px;
+            margin: 0 auto;
+            padding: 5px;
+        }
+        .bar:hover{
+            color: white;
+            background-color: rgba(90,209,130,0.78);
+        }
+    </style>
+</head>
+<body>
+<a class="bar" href="CSS_transition.html">No.1 - 制作一个简单的菜单动画效果</a>
+<h3>cubic-bezier</h3>
+
+<div>
+    <div id="transition">transition</div>
+    <div id="cubic">cubic-bezie</div>
+</div>
+
+</body>
+</html>

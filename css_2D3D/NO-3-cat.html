@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #d69a44;
+        }
+
+        /*脸型*/
+        .face{
+            z-index: 2;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            width: 350px;
+            height: 250px;
+            margin-left: -15%;
+            background-color: #fbf8f1;
+            border-radius: 50% 50% 30% 30%;
+            border: 2px solid #3f200b;
+            overflow: hidden;
+        }
+        /*印记*/
+        .tag{
+            background: rgba(229,168,4,0.96);
+            width: 120px;
+            height: 80px;
+            position: absolute;
+            border-radius: 100%;
+            top: 0%;
+            left: 65%;
+            transform-origin: 55% 10px;
+            transform: rotate(30deg);
+        }
+
+        /*眼睛*/
+        .ear-wrap{
+            position: relative;
+            width: inherit;
+            height: inherit;
+        }
+        .eye{
+            overflow: hidden;
+            position: absolute;
+            width: 100px;
+            height: 80px;
+            top: 35%;
+        }
+        .left,.left-eye{
+            left: 10%;
+        }
+        .left-eye{
+            margin-left: -10%;
+        }
+        .right,.right-eye{
+            right: 10%;
+        }
+        .right-eye{
+            margin-right: -10%;
+        }
+        /*眼眶*/
+        .left-eye,.right-eye{
+            width: 100px;
+            height: 80px;
+            border: 2px solid #482507;
+            /*overflow: hidden;*/
+            position: absolute;
+            background: #fff;
+            border-radius: 50% 50% 40% 40%;
+            box-sizing: border-box;
+            top: 8%;
+        }
+        /*眼珠*/
+        .eye-core{
+            position: absolute;
+            top: 8%;
+            margin-top: -6%;
+            height: 55px;
+            width: 46px;
+            border-radius: 50% 50% 50% 50%;
+            overflow: hidden;
+            background-color: black;
+        }
+        .left-core{
+            left: 25%;
+        }
+        .right-core{
+            right: 25%;
+        }
+        /*腮*/
+        .bottom{
+            height: 50px;
+            width: 100px;
+            border-top: 2px solid #46240b;
+            position: absolute;
+            border-radius: 100%;
+            top: 70%;
+            background: #f6f7f2;
+        }
+        .left .bottom{
+            left: 10%;
+            margin-left: -10%;
+        }
+        .right .bottom{
+            right: 10%;
+            margin-right: -10%;
+        }
+        .red{
+            display: none;
+            position: absolute;
+            top: 75%;
+            background: #e85a5e;
+            height: 20px;
+            width: 70px;
+            border-radius: 50% 50% 50% 50%;
+        }
+        .left .red{
+            left: 12%;
+        }
+        .right .red{
+            right: 12%;
+        }
+
+        /*耳朵*/
+        .ears{
+            position: absolute;
+            top: 12%;
+            left: 50%;
+            margin-left: -180px;
+            width: 300px;
+            /*border: 1px solid red;*/
+        }
+        .ear-left,.ear-right{
+            display: inline-block;
+            width: 80px;
+            height: 100px;
+            border: 2px solid #000;
+            background: #fbf8f1;
+        }
+        .ear-left{
+            border-radius: 100% 10% 50% 0% ;
+        }
+        .ear-right{
+            background: rgba(229,168,4,0.96);
+            position: absolute;
+            top: 0%;
+            right: 0px;
+            border-radius: 10% 100% 10% 50% ;
+        }
+        /*口鼻*/
+        .mouth-nose{
+            position: absolute;
+            top: 65%;
+            left: 0px;
+            width: inherit;
+            height: auto;
+        }
+        .nose{
+            width: 20px;
+            height: 10px;
+            margin: 0 auto;
+            border-bottom: 8px solid #000;
+            border-radius: 0% 0% 50% 50%;
+        }
+
+        .mouth-wrap{
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            margin-left: -60px;
+            width: 120px;
+            height: 50px;
+            overflow: hidden;
+            /*border: 1px solid red;*/
+        }
+        .mouth-left,.mouth-right{
+            width: 40px;
+            height: 40px;
+            border-bottom: 4px solid #000;
+            border-right: 4px solid #000;
+            border-radius: 0% 40% 50% 20%;
+            position: absolute;
+            margin-top: -20px;
+            margin-left: 16px;
+        }
+
+        .mouth-right{
+            border-bottom: 4px solid #000;
+            border-right: none;
+            border-left: 4px solid #000;
+            border-radius: 40% 0% 20% 50%;
+            position: absolute;
+            left: auto;
+            right: 16px;
+        }
+
+
+        .contain:hover .ear-left{
+            transform: rotate(-30deg);
+        }
+        .contain:hover .ear-right{
+            transform: rotate(30deg);
+        }
+        .contain:hover .bottom{
+            transform: translateY(-10px);
+        }
+        .contain:hover .red{
+            display: block;
+        }
+        .contain:hover .mouth-right{
+            transform: scaleX(0.9);
+            right: 19px;
+        }
+        .contain:hover .mouth-left{
+            transform: scaleX(0.9);
+            margin-left: 19px;
+        }
+    </style>
+</head>
+<body>
+<div class="contain">
+    <div class="face">
+        <div class="tag"></div>
+
+        <div class="eye-wrap">
+            <div class="eye left">
+                <div class="left-eye">
+                    <div class="eye-core left-core"></div>
+                </div>
+                <div class="bottom"></div>
+                <div class="red"></div>
+            </div>
+
+            <div class="eye right">
+                <div class="right-eye">
+                    <div class="eye-core right-core"></div>
+                </div>
+                <div class="bottom"></div>
+                <div class="red"></div>
+            </div>
+
+        </div>
+
+        <div class="mouth-nose">
+            <div class="nose"></div>
+            <div class="mouth-wrap">
+                <div class="mouth-left"></div>
+                <div class="mouth-right"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ears">
+        <div class="ear-left"></div>
+        <div class="ear-right"></div>
+    </div>
+</div>
+</body>
+</html>
