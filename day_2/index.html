@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .contain{
+            position: relative;
+            width: 100%;
+            height: 600px;
+            background-color: rgba(84,253,43,0.41);
+        }
+        .left{
+            /*padding-left: 20px;*/
+            width: 20%;
+            height: 600px;
+            position: absolute;
+            top: 0px;
+            left: 10%;
+            overflow: hidden;
+            border-right: white 2px solid;
+        }
+        .border ,.myPic{
+            position: absolute;
+            top: 20px;
+            left: 0px;
+            width: 200px;
+            height: 200px;
+            transition: all .5s ease-in;
+        }
+        .myPic{
+            background-size: cover;
+        }
+        .info{
+            position: absolute;
+            top: 210px;
+            width: 200px;
+            height: 200px;
+            z-index: 9;
+        }
+        .border{
+            border: 10px brown solid;
+            border-radius: 50%;
+            border-top-color: #d69a44;
+            border-right-color: #d69a44;
+            box-sizing: border-box;
+        }
+        .left .myPic{
+            border-radius: 50%;
+            background-position: 50% 50%;
+        }
+        .border:hover{
+            transform: rotate(180deg);
+        }
+       ul li{
+            list-style: none;
+            display: block;
+            font-size: 15px;
+        }
+        .left .info>ul>li>span{
+            font-size: 18px;
+            font-family: cursive;
+            font-weight: bold;
+        }
+        .right{
+            padding-left: 20px;
+            position: absolute;
+            top: 10px;
+            left: 30%;
+            right: 0%;
+            height: 600px;
+        }
+        .right pre{
+            padding-left: 0px;
+            margin-left: 0px;
+            width: 95%;
+            background-color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="contain">
+    <h3>我的简历</h3>
+    <div class="left">
+        <div class="myPic" style=" background-image: url(index.jpg);"></div>
+        <div class="border"></div>
+        <div class="info">
+            <ul>
+                <li>姓名：<span>林凡</span></li>
+                <li>性别：<span>女</span></li>
+                <li>学历：<span>本科</span></li>
+                <li>专业：<span>物联网</span></li>
+                <li>电话：<span>187xxxx xxxx</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right">
+        <div>
+            <h4>个人经历</h4>
+            <pre>
+                格林大学毕业,目前在一家娱乐公司做经纪人，该音乐人是父亲的曾经一起工作的歌手
+                格林大学毕业,
+                目前在一家娱乐公司做经纪人，该音乐人是父亲的曾经一起工作的歌手目前在一家娱乐
+                公司做经纪人，该音乐人是父亲的曾经一起工作的歌手
+            </pre>
+        </div>
+        <div>
+            <h4>获奖经历</h4>
+            <pre>
+                全国java小码哥小组赛二等奖，蓝桥杯java二等奖
+                目前在一家娱乐公司做经纪人，该音乐人是父亲的曾经一起工作的歌手目前在一家娱乐
+                公司做经纪人，该音乐人是父亲的曾经一起工作的歌手
+            </pre>
+        </div>
+    </div>
+</div>
+</body>
+</html>
